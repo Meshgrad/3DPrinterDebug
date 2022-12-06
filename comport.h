@@ -28,6 +28,12 @@ public:
     ~ComPort();
 private:
     QSerialPort *serialPort;
+    QByteArray data;
+    void sendCommand(QByteArray *arr);
+    QStringList availablePorts();
+private slots:
+    bool slotEditConnectionState(SerialPort::Port port);
+
 };
 
 #endif // COMPORT_H
