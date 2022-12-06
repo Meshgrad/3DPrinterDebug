@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    serialPort = new ComPortSettings();
+    serialPortSettings = new ComPortSettings();
     connect(ui->settings_button,&QPushButton::clicked,this,&MainWindow::openSettingsWindow);
 }
 
@@ -17,8 +17,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::openSettingsWindow()
 {
-    serialPort->setModal(true);
-    serialPort->exec();
+    serialPortSettings->setModal(true);
+    serialPortSettings->exec();
 }
 
 

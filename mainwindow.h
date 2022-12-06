@@ -19,7 +19,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    ComPortSettings *serialPort;
+    ComPortSettings *serialPortSettings;
 private slots:
     void openSettingsWindow();
 };
