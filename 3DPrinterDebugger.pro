@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,13 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    comportsettings.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    comportsettings.h \
     mainwindow.h
 
 FORMS += \
+    comportsettings.ui \
     mainwindow.ui
 
 # Default rules for deployment.

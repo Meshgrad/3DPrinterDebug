@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "comportsettings.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -17,5 +19,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    ComPortSettings *serialPort;
+private slots:
+    void openSettingsWindow();
 };
 #endif // MAINWINDOW_H
